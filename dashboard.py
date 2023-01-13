@@ -12,7 +12,7 @@ from folium.plugins   import MarkerCluster
 
 from datetime import datetime
 
-server = dashboard.server
+
 st.set_page_config(layout='wide')
 
 
