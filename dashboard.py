@@ -277,24 +277,24 @@ def attributes_distribution(df):
 
 if __name__ == '__main__':
 
-#ETL
-#data extration
-path = 'kc_house_data/data.csv'
-url = 'https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson'
+    #ETL
+    #data extration
+    path = 'data.csv'
+    url = 'https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson'
 
 
-df = get_data(path)
-geofile = get_geofile( url )
+    df = get_data(path)
+    geofile = get_geofile( url )
 
 
-#transformation
-df = set_feature(df)
+    #transformation
+    df = set_feature(df)
 
-overview_data(df)
+    overview_data(df)
 
-portifolio_density(df, geofile)
+    portifolio_density(df, geofile)
 
-commercial(df)
+    commercial(df)
 
 attributes_distribution(df)
     
