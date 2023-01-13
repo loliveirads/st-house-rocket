@@ -11,7 +11,10 @@ from streamlit_folium import folium_static
 from folium.plugins   import MarkerCluster
 
 from datetime import datetime
+
+server = dashboard.server
 st.set_page_config(layout='wide')
+
 
 @st.cache(allow_output_mutation=True)
 def get_data(path):
@@ -295,3 +298,6 @@ if __name__ == '__main__':
     commercial(df)
 
     attributes_distribution(df)
+    
+    if __name__ == "__main__":
+    dashboard.run_server(debug=False)
